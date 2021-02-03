@@ -1,0 +1,233 @@
+
+:root {
+  /* primary colors */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* neutrals */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --just-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+}
+
+html, body {
+  font-size: 1.5rem;
+  font-family: 'Spartan', sans-serif;
+}
+
+body {
+  padding: 10px 25px;
+}
+
+.bg-pattern--top {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  top: 0;
+  background-image: url('../images/bg-pattern-top-mobile.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main--title {
+  text-align: center;
+}
+.main--title h2 {
+  margin-top: 70px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--very-dark-magenta);
+}
+.main--title p {
+  margin-top: 25px;
+  font-size: 0.60rem;
+  font-weight: 400;
+  line-height: 0.90rem;
+  color: var(--dark-grayish-magenta);
+}
+
+.ratings {
+  margin: 25px 0;
+  text-align: center;
+}
+.ratings article {
+  line-height: 0.80rem;
+  margin: 10px 0;
+  padding: 6px 0;
+  background-color: var(--light-grayish-magenta);
+  border-radius: 8px;
+}
+.ratings .ratings--stars {
+  list-style-type: none;
+}
+.ratings .ratings--stars li {
+  margin: 0 2px;
+  display: inline-block;
+  font-size: 0.47rem;
+  color: #EF8335;
+}
+.ratings .ratings--desc {
+  font-size: 0.25rem;
+  font-weight: bold;
+  color: var(--very-dark-magenta);
+}
+
+.reviews {
+  margin: 20px 0;
+}
+.reviews article {
+  color: var(--just-white);
+  background-color: var(--very-dark-magenta);
+  margin: 10px 0;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.profile--image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.reviews--profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.reviews--profile .profile--info {
+  margin-left: 20px;
+  line-height: 0.60rem;
+}
+.profile--info .info--name {
+  font-size: 0.40rem;
+  font-weight: bold;
+}
+.profile--info .info--status {
+  color: var(--soft-pink);
+}
+
+.reviews .reviews--comment {
+  font-size: 0.45rem;
+  line-height: 0.60rem;
+  color: var(--light-grayish-magenta);
+}
+
+
+.bg-pattern--bottom {
+  position: fixed;
+  width: 100%;
+  height: 510px;
+  bottom: -150px;
+  /* left: 0; */
+  background-image: url('../images/bg-pattern-bottom-mobile.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1440px 
+*/
+@media (min-width: 1440px) {
+
+  body {
+    padding: 120px;
+  }
+
+  .bg-pattern--top {
+    background-image: url('../images/bg-pattern-top-desktop.svg');
+    width: 50%;
+  }
+
+  .header--component {
+    display: flex;
+    align-items: center;
+  }
+  .header--component .main--title {
+    text-align: left;
+    width: 50%;
+  }
+  .main--title h2 {
+    font-size: 2.3rem;
+  }
+  .main--title p {
+    font-size: 0.80rem;
+    line-height: 1.4rem;
+  }
+  .header--component .ratings {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ratings article {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+  }
+  .ratings article:nth-child(2) {
+    position: relative;
+    left: 40px;
+  }
+  .ratings article:nth-child(3) {
+    position: relative;
+    left: 80px;
+  }
+
+  .ratings .ratings--stars {
+    margin-right: 20px;
+  }
+  .ratings .ratings--stars li {
+    font-size: 0.80rem;
+  }
+  .ratings .ratings--desc {
+    font-size: 0.60rem;
+  }
+
+  .reviews {
+    display: flex;
+  }
+  .reviews article {
+    margin: 0 10px;
+    padding: 40px;
+  }
+
+  .profile--image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile--info p {
+    line-height: 0.90rem;
+  }
+
+  .profile--info .info--name {
+    font-size: 0.70rem;
+  }
+  .profile--info .info--status {
+    font-size: 0.60rem;
+  }
+
+  .reviews--comment {
+    margin-top: 30px;
+  }
+
+  .reviews--comment p {
+    font-size: 0.70rem;
+    line-height: 1.1rem;
+  }
+
+
+  .bg-pattern--bottom {
+    background-image: url('../images/bg-pattern-bottom-desktop.svg');
+  }
+}
